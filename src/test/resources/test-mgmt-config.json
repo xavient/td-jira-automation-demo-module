@@ -1,0 +1,19 @@
+{
+    "JIRA_SERVER":{
+        "ConnectionEnable": "true", 
+        "AttachmentsEnable": "false", 
+		"ServerUrl": "https://jira.tsl.telus.com/",
+        "User": "dsr_api_user",
+        "Password": "UmY2NnhFQXlXMHlsYWtvQXNqckQh",
+        "token": "UmY2NnhFQXlXMHlsYWtvQXNqckQh",
+        "ProjectKey": "SKP",
+        "ProjectId": "10024",             
+        "SearchMode": "ANNOTATION",
+        "SearchModeSummary_CreateItemToReport": "Test",
+        "SearchModeSummary_SearchJqlBaseQuery": "Open_AnyType",
+        "SearchModeSummary_SearchResultsMaxItemsToUpdate": "10",
+        "ZephyrTestExecutionEnable": "true", 
+        "ZephyrTestCycleId": "-1", 
+        "ZephyrTestCycleVersionId": "-1"
+    }
+ }
