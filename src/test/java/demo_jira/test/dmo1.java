@@ -6,9 +6,8 @@ import org.testng.Assert;
 
 import net.rcarz.jiraclient.Issue;
 import net.rcarz.jiraclient.Issue.SearchResult;
-import tdx.common.core.logging.CustomLogs;
 import tdx.common.core.reporter.Status;
-
+import tdx.jira.core.logging.CustomLogs;
 import tdx.jira.core.utils.JiraReporting;
 
 import java.io.File;

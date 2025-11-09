@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<!-- Theme of the report: standard | dark -->
+		<theme>dark</theme>
+
+		<!-- Encoding for the report, default is UTF-8 -->
+		<encoding>UTF-8</encoding>
+
+		<!-- Protocol for scripts and stylesheets: http | https -->
+		<protocol>https</protocol>
+
+		<!-- Title of the HTML document (browser tab) -->
+		<documentTitle>UI Test Automation Report</documentTitle>
+
+		<!-- Name displayed at the top navigation bar -->
+		<reportName>Testng Automation Report</reportName>
+
+		<!-- Location of charts in test view: top | bottom -->
+		<testViewChartLocation>top</testViewChartLocation>
+
+		<!-- Enable / disable timeline view: true | false -->
+		<timelineEnabled>true</timelineEnabled>
+
+		<!-- Set the order of test display: OLDEST_FIRST | NEWEST_FIRST -->
+		<testDisplayOrder>OLDEST_FIRST</testDisplayOrder>
+
+		<!-- Default status filter: pass | fail | skip | warning | info | error | fatal -->
+		<statusFilter>fail,skip,pass</statusFilter>
+
+		<!-- Enable or disable offline mode (loads resources locally, no CDN): true | false -->
+		<offlineMode>false</offlineMode>
+
+		<!-- Custom CSS styles -->
+		<styles>
+			<![CDATA[
+				/* Customize the font for headings */
+				.navbar-brand { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; }
+				/* Example: Hide the search bar */
+				#search-panel { display: none; }
+			]]>
+		</styles>
+
+		<!-- Custom JavaScript -->
+		<js>
+			<![CDATA[
+				$(document).ready(function() {
+					// Hide the exception navigation tab
+					$("#nav-exception").hide();
+					// Example: Highlight failed tests in red
+					$(".test-status.fail").css("background-color", "#ffdddd");
+				});
+			]]>
+		</js>
+
+		<!-- Logo for the report (visible in nav bar) -->
+		<logo>https://www.telusdigital.com/_next/static/media/logo-telus-digital.daaa0538.svg</logo>
+
+		<!-- Timestamp format e.g. 2025-06-19 17:45:00 -->
+		<timeStampFormat>yyyy-MM-dd HH:mm:ss</timeStampFormat>
+
+		<!-- Set the report locale (for formatting dates, etc.) -->
+		<locale>en</locale>
+
+		<!-- Set the report timezone -->
+		<timezone>UTC</timezone>
+	</configuration>
+</extentreports>
