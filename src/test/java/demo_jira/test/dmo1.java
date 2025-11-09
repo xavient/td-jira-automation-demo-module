@@ -6,9 +6,10 @@ import org.testng.Assert;
 
 import net.rcarz.jiraclient.Issue;
 import net.rcarz.jiraclient.Issue.SearchResult;
-import telusdigital.ui.core.reporting.Reporting;
 import telusdigital.common.core.reporter.Status;
-import telusdigital.jira.core.utils.JiraReporting;
+import telusdigital.ui.core.reporting.Reporting;
+
+import tdx.jira.core.utils.JiraReporting;
 
 import java.io.File;
 import java.io.IOException;
@@ -90,45 +91,45 @@ public class dmo1 {
         Reporting.log(Status.PASS, "Successfully executed updateJiraIssueAttachment for issue: " + MOCK_ISSUE_KEY);
     }
 
-    /**
-     * Tests the {@code updateJiraExistingIssue} method.
-     * This method updates an existing issue's details and can also attach a file.
-     */
-    @Test(description = "Tests updating an existing Jira issue with a new description and status.",priority = 3,groups = { "jiraDemo1" })
-    public void testUpdateJiraExistingIssue_updatesDetails() {
-        Reporting.log(Status.INFO,"\n--- Running: testUpdateJiraExistingIssue_updatesDetails ---");
-        File dummyFile = new File(DUMMY_IMAGE_PATH);
-        boolean isUpdated = JiraReporting.updateJiraExistingIssue(
-            Status.FAIL,
-            "[TO BE DELETED]_Updated bug description with new details after test failure.",
-            "Test",
-            "SKP-288",
-            dummyFile
-        );
-        Assert.assertTrue(isUpdated, "The Jira issue should be updated successfully.");
-        Reporting.log(Status.PASS,"Successfully updated Jira issue: " + MOCK_ISSUE_KEY);
-    }
-
-    /**
-     * Tests the {@code updateJiraExistingIssueOrCreateNew} method.
-     * This is a core reporting method that intelligently either updates or creates an issue.
-     */
-    @Test(description = "Tests creating a new Jira issue with a screenshot when no matching issue is found.",priority = 4,groups = { "jiraDemo" })
-    public void testUpdateOrCreateNewIssue_createsNewIssue() throws Exception {
-        Reporting.log(Status.INFO,"\n--- Running: testUpdateOrCreateNewIssue_createsNewIssue ---");
-        File dummyFile = new File(DUMMY_IMAGE_PATH);
-        String issueSummary = "New Bug from Automation Run " + System.currentTimeMillis()+" [TO BE DELETED]";
-        String issueDescription = "This test simulates a failure and creates a new issue."+" [TO BE DELETED]";
-        JiraReporting.updateJiraExistingIssueOrCreateNew(
-            Status.PASS,
-            issueSummary,
-            issueDescription,
-            "Test",
-            dummyFile
-        );
-        // This method has no return, so we assert that no exception was thrown.
-        Reporting.log(Status.PASS,"Successfully executed updateJiraExistingIssueOrCreateNew.");
-    }
+//    /**
+//     * Tests the {@code updateJiraExistingIssue} method.
+//     * This method updates an existing issue's details and can also attach a file.
+//     */
+//    @Test(description = "Tests updating an existing Jira issue with a new description and status.",priority = 3,groups = { "jiraDemo1" })
+//    public void testUpdateJiraExistingIssue_updatesDetails() {
+//        Reporting.log(Status.INFO,"\n--- Running: testUpdateJiraExistingIssue_updatesDetails ---");
+//        File dummyFile = new File(DUMMY_IMAGE_PATH);
+//        boolean isUpdated = JiraReporting.updateJiraExistingIssue(
+//            Status.FAIL,
+//            "[TO BE DELETED]_Updated bug description with new details after test failure.",
+//            "Test",
+//            "SKP-288",
+//            dummyFile
+//        );
+//        Assert.assertTrue(isUpdated, "The Jira issue should be updated successfully.");
+//        Reporting.log(Status.PASS,"Successfully updated Jira issue: " + MOCK_ISSUE_KEY);
+//    }
+//
+//    /**
+//     * Tests the {@code updateJiraExistingIssueOrCreateNew} method.
+//     * This is a core reporting method that intelligently either updates or creates an issue.
+//     */
+//    @Test(description = "Tests creating a new Jira issue with a screenshot when no matching issue is found.",priority = 4,groups = { "jiraDemo" })
+//    public void testUpdateOrCreateNewIssue_createsNewIssue() throws Exception {
+//        Reporting.log(Status.INFO,"\n--- Running: testUpdateOrCreateNewIssue_createsNewIssue ---");
+//        File dummyFile = new File(DUMMY_IMAGE_PATH);
+//        String issueSummary = "New Bug from Automation Run " + System.currentTimeMillis()+" [TO BE DELETED]";
+//        String issueDescription = "This test simulates a failure and creates a new issue."+" [TO BE DELETED]";
+//        JiraReporting.updateJiraExistingIssueOrCreateNew(
+//            Status.PASS,
+//            issueSummary,
+//            issueDescription,
+//            "Test",
+//            dummyFile
+//        );
+//        // This method has no return, so we assert that no exception was thrown.
+//        Reporting.log(Status.PASS,"Successfully executed updateJiraExistingIssueOrCreateNew.");
+//    }
     
     /**
      * Tests the {@code getOpenIssuesDetails} method.

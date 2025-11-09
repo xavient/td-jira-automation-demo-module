@@ -99,9 +99,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>telusdigital.test.automation</groupId>
-			<artifactId>jira-handler</artifactId>
-			<version>2.0.1</version>
+		  <groupId>tdx.test.automation</groupId>
+		  <artifactId>jira-handler</artifactId>
+		  <version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>telusdigital.unified.framework.release</groupId>
